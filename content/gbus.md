@@ -750,7 +750,7 @@ Template: manual
             <li>Connect CB2 to the MB. Connect your interface to the L channel input. You do not need to connect to the output.</li>
             <li>Send 60Hz, +4dBu test signal.</li>
             <li>Set the meter to AC volts and probe the FILTER and GND test points on the L channel.</li>
-            <li>Turn the FILTER knob to positions 1-6 (later you will set the stop so that this is the furthest the switch can be turned). The value should start around ~1v at OFF, then go down, then back up, then finally end at 0V in the Ext. SC position.</li>
+            <li>Turn the FILTER knob to positions 1-6 (later you will set the stop so that this is the furthest the switch can be turned). The value should start around 1v at OFF, then go down, then back up, then finally end at 0V in the Ext. SC position.</li>
             <li>Repeat steps 2-6 with the R channel.</li>
             <li>Disconnect CB2 from the MB.</li>
         </ol>
