@@ -28,12 +28,12 @@ Template: manual
 <h2>Component Sorting Sheet</h2>
 <div class="manual-step">
     <div class="step-image">
-    <a href="%base_url%/assets/ff1/FF1_Sorting_Sheet_1.2.pdf" target="_blank">
+    <a href="%base_url%/assets/ff1/FF1_Sorting_Sheet_1.3.pdf" target="_blank">
     <img src="%base_url%/assets/pdf-download.png" />
     </a>
     </div>
     <div class="step-description">
-        <p>To identify and keep track of every part in the kit, download and print the <a href="%base_url%/assets/ff1/FF1_Sorting_Sheet_1.2.pdf" target="_blank">Component Sorting Sheet (PDF)</a>.</p>
+        <p>To identify and keep track of every part in the kit, download and print the <a href="%base_url%/assets/ff1/FF1_Sorting_Sheet_1.3.pdf" target="_blank">Component Sorting Sheet (PDF)</a>.</p>
     </div>
 </div>
 
