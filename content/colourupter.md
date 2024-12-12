@@ -129,6 +129,7 @@ Template: manual
     <h3 class="step-header">Populate Capacitors</h3>
         <div class="step-description">
         <p>Place the capacitors in their respective positions. The capacitors are not polarized and therefore can be placed in either direction. Solder then trim the leads.</p>
+		<p><strong>Note:</strong> These capacitors are mistakenly marked "100u" on the PCB. They should be 10u as shown in the photo.</p>
 </div>
   </div>
   
