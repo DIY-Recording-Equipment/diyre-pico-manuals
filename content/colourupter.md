@@ -179,7 +179,7 @@ Template: manual
 
 <h2>Calibration</h2>
 
-<p>No two vactrols is exactly alike. So to ensure predictable behavior and acceptable stereo matching, we need to calibrate the Colourupter. If you are using the Colourupter in a 500-series rack, the following steps will be easier with an extender like the <a href="https://www.diyrecordingequipment.com/products/500ext-500-series-extender-kit">500EXT</a>.</p>
+<p>No two vactrols are exactly alike. So to ensure predictable behavior and acceptable stereo matching, we need to calibrate the Colourupter. If you are using the Colourupter in a 500-series rack, the following steps will be easier with an extender like the <a href="https://www.diyrecordingequipment.com/products/500ext-500-series-extender-kit">500EXT</a>.</p>
 
 <div class="manual-step">
     <div class="step-image">
@@ -187,8 +187,8 @@ Template: manual
     </div>
     <h3 class="step-header">Set Up for Testing</h3>
 <div class="step-description">
-        <p>Download and install <a href="https://www.roomeqwizard.com/">Room EQ Wizard</a> on your computer. In Preferences chose your audio interface for the Input and Output Device and set the Input and Output to the left/channel 1.</p>
-        <p>Connect the Colourupter to the left/channel 1 of your interface.</p>
+        <p>Download and install <a href="https://www.roomeqwizard.com/">Room EQ Wizard</a> on your computer. In Preferences choose your audio interface for the Input and Output Device and set the Input and Output to the left/channel 1.</p>
+        <p>Connect the Colour host with your Colourupter to the left/channel 1 of your interface.</p>
 </div>
 </div>
 
@@ -201,7 +201,7 @@ Template: manual
     </div>
     <h3 class="step-header">Check Unity Gain</h3>
 <div class="step-description">
-        <p>Set your Colour host so that the Colour section is engaged but all of the Colours are bypassed. For example, on the Colour Palette mkII, the IN switch should be in, but all Colour switches should be out. If your host as a trim, set it to unity gain.</p>
+        <p>Set your Colour host so that the Colour section is engaged but all of the Colours are bypassed. For example, on the Colour Palette mkII, the IN switch should be in, but all Colour switches should be out. If your host has a trim, set it to unity gain.</p>
         <p>In REW open the Generator module and set it to:</p>
         <ul>
             <li>Tones, Sine</li>
