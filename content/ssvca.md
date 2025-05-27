@@ -237,8 +237,8 @@ Template: manual
 
 <div class="manual-step">
     <div class="step-image">
-        <a href="%base_url%/assets/colourupter/rew-unity.jpg" target="_blank">
-        <img src="%base_url%/assets/colourupter/rew-unity-600.jpg" />
+        <a href="%base_url%/assets/ssvca/rew-unity.png" target="_blank">
+        <img src="%base_url%/assets/ssvca/rew-unity-600.png" />
         </a>
     </div>
     <h3 class="step-header">Check Unity Gain</h3>
@@ -248,25 +248,23 @@ Template: manual
         <ul>
             <li>Tones, Sine</li>
             <li>Frequency Hz: 1000</li>
-            <li>-12dBFS</li>
+            <li>-30dBFS</li>
         </ul>
-        <p>Push the green play button and open REW's Levels module. Make sure the signal is coming back into the input at or very close to -12dBFS. This is unity gain. If you are not getting unity gain, check your connections.</p>
+        <p>Push the green play button and open REW's Levels module. Make sure the signal is coming back into the input at or very close to -30dBFS. This is unity gain. If you are not getting unity gain, check your connections.</p>
 </div>
 </div>
 
 <div class="manual-step">
     <div class="step-image">
-        <a href="%base_url%/assets/colourupter/rew-cal.jpg" target="_blank">
-        <img src="%base_url%/assets/colourupter/rew-cal-600.jpg" />
+        <a href="%base_url%/assets/ssvca/rew-cal.png" target="_blank">
+        <img src="%base_url%/assets/ssvca/rew-cal-600.png" />
         </a>
     </div>
-    <h3 class="step-header">Calibrate Make-up</h3>
+    <h3 class="step-header">Calibrate Gain</h3>
 <div class="step-description">
         <p>Set SW1 to 2:1 and SW2 to FAST.</p>
-        <p>Using a flathead screwdriver, turn VR1 counter-clockwise until you hear a small click. This sets the make-up gain to 0dB.</p>
-        <p>Second, engage the SS VCA and turn the Colour knob until the In meter is -15dBFS. That is, set the SS VCA for 3dB of gain reduction.</p>
-        <p>Third, adjust VR1 until the In level returns to -12dBFS. Your SS VCA is now calibrated.</p>
-         <p>(Note that the screenshot for this step shows the levels after step 2 and before step 3.)</p>
+        <p>Engage the SS VCA and set the Colour knob completely counter-clockwise. The level on the In meter in REW should change slightly when you engage the SS VCA.</p>
+        <p>Adjust VR1 on the SS VCA until the In level is -27dBFS (3dB gain). Your SS VCA is now calibrated.</p>
 </div>
 </div>
 
