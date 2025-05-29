@@ -198,7 +198,7 @@ Template: manual
     <p>The AurEx is two signal processors in one: a low-frequency maximizer and a high-frequency exciter. Each has it's own dedicated saturation circuitry, so adjusting one band does not affect the other.</p>
     <p>VR1 controls the amount of the LF maximizer that is mixed into the dry signal. In the CCW position, the maximizer is completely off. In the CW position the maximizer is equal to the dry signal for 50/50 wet/dry mix. Note that VR1 does not control the gain and therefore the distortion of the maximizer circuit. Instead, this is controlled by the Colour knob on the front panel.</p>
     <p>VR2 controls the gain of the HF exciter circuitry. In the CCW position, there will be a slight HF boost but none of the exciter effect. As you turn VR2 CW, both the gain and saturation of the exciter circuit increase. Unlike the maxmizer, the exciter is always set to 50/50 wet/dry mix.</p>
-	<p>The trimpots have a total travel of about 25 turns. You will hear and feel a small click when they reach the fully CW and CCW positions. Beyind this point, the actuator will keep turning but the resistance value won't change.</p>
+	<p>The trimpots have a total travel of about 25 turns. You will hear and feel a small click when they reach the fully CW and CCW positions. Beyond this point, the actuator will keep turning but the resistance value won't change.</p>
 	<p>To stereo match two AurEx units, first set one the way you want it. Then use a multi-meter to measure the resistance between the square pad (on the left when viewing the board from the bottom) and the middle pad for both trimpots. Note these values, then set the trimpots of the other AurEx to be as close as possible to them.</p>
 </div>
 </div>
