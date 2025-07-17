@@ -489,11 +489,13 @@ Template: manual
     <h3 class="step-header">Test Relays</h3>
 <div class="step-description">
         <ol>
+            <li>Connect the power cable to the G Bus.</li>
             <li>Set the multi-meter to read continuity (the "beep mode").</li>
             <li>Place the probes on the test points next to a relay (it doesn't matter which probe goes where).</li>
             <li>Press the button on the CB associated with that relay. The meter should beep when the switches are pressed IN, except for the IN switch. For the IN switch, the meter should beep when the switch is out.</li>
             <li>Repeat for each relay. Note that the two XFMR relays U3_1 and U3_2 are controlled by the same button.</li>
             <li>Disconnect CB2 and the IN switch from the MB.</li>
+            <li>Unplug the power cable before proceeding with the assembly.</li>
         </ol>
         <p><strong>Note:</strong> Due to a bug on the v1.0 PCB, the MONO SC relay will not test correctly. You can skip testing this relay. The revision number is in the lower left corner of the main PCB. For v1.0 it says "1.0 2022."</p>
 </div>
@@ -604,9 +606,11 @@ Template: manual
                     <li>Press "Calibrate Level" and enter the value.</li>
             </ol>
             <li>Switch the dB unit to dBu. Then set the generator to 60Hz, +4dBu.</li>
+            <li>Connect the power cable to the G Bus.</li>
             <li>Connect the TRS plug to J5_1</li>
             <li>On the L channel, place the probes on the BAL in and GND test points. Your meter should read between 1.1-1.3V.</li>
             <li>Repeat steps 3-5 for the R channel.</li>
+            <li>Unplug the power cable before proceeding with the assembly.</li>
         </ol>
 </div>
 </div>
@@ -690,11 +694,13 @@ Template: manual
 <h3 class="step-header">Test Main Output and Set Unity Gain</h3>
 <div class="step-description">
         <ol>
+            <li>Connect the power cable to the G Bus.</li>
             <li>Connect your interface to the L channel input and output.</li>
             <li>Send a 1Khz, -10dBFS test signal.</li>
             <li>Open Levels in REW. You should see your -10dBFS test signal on the Out meter and some level coming back in on the In meter.</li>
             <li>Set unity gain by turning VR1 until the In meter matches the Out meter.</li>
             <li>Repeat steps 2-5 with the R channel.</li>
+            <li>Unplug the power cable before proceeding with the assembly.</li>
         </ol>
 </div>
 </div>
@@ -747,12 +753,14 @@ Template: manual
     <h3 class="step-header">Test Filter</h3>
 <div class="step-description">
         <ol>
+            <li>Connect the power cable to the G Bus.</li>
             <li>Connect CB2 to the MB. Connect your interface to the L channel input. You do not need to connect to the output.</li>
             <li>Send 60Hz, +4dBu test signal.</li>
             <li>Set the meter to AC volts and probe the FILTER and GND test points on the L channel.</li>
             <li>Turn the FILTER knob to positions 1-6 (later you will set the stop so that this is the furthest the switch can be turned). The value should start around 1v at OFF, then go down, then back up, then finally end at 0V in the Ext. SC position.</li>
             <li>Repeat steps 2-6 with the R channel.</li>
             <li>Disconnect CB2 from the MB.</li>
+            <li>Unplug the power cable before proceeding with the assembly.</li>
         </ol>
 </div>
 </div>
@@ -885,12 +893,14 @@ Template: manual
     <h3 class="step-header">Test SC VCA</h3>
 <div class="step-description">
         <ol>
+            <li>Connect the power cable to the G Bus.</li>
             <li>Connect both CBs and the IN switch to the MB. Connect your interface to both inputs. Leave the outputs unconnected.</li>
             <li>Set all controls CCW (counter-clockwise).</li>
             <li>Engage the compressor with the IN button.</li>
             <li>Send a 60Hz sine wave, +4dBu test signal. In the REW Generator, set the Output to 1+2 (this might also be called L+R). This option is at the bottom of the window, next to the Play button.</li>
             <li>Set the multi-meter to read DC volts.</li>
             <li>Place the probes on the SC and GND test points located on the bottom-right of the MB. Remember to place the black probe on GND. The meter should display a negative value between -0.5V and -3V (there is a wide range because we have not calibrated the ratio yet).</li>
+            <li>Unplug the power cable before proceeding with the assembly.</li>
         </ol>
 </div>
 </div>
@@ -942,11 +952,13 @@ Template: manual
     <h3 class="step-header">Check Meter</h3>
 <div class="step-description">
         <ol>
+            <li>Connect the power cable to the G Bus.</li>
             <li>As you did for the last test connect your interface to both inputs but leave the outputs disconnected.</li>
             <li>Send the same test signal from REW as before (60Hz sine wave, +4dBu).</li>
             <li>Engage the compressor with the IN button.</li>
             <li>Turn the THRESH knob until you see compression on the meter. If the meter shows gain reduction, you can move on.</li>
              <li>Disconnect the CBs, IN switch, and meter from the MB.</li>
+             <li>Unplug the power cable before proceeding with the assembly.</li>
         </ol>
 </div>
 </div>
@@ -1109,6 +1121,7 @@ Template: manual
 <div class="step-description">
     <p>The audio VCAs must be manually trimmed for the lowest distortion.</p>
         <ol>
+            <li>Connect the power cable to the G Bus.</li>
             <li>Connect inputs and outputs to the L channel.</li>
             <li>Disengage the compressor, turn the THRESHOLD completely CW, and the DRIVE completely CCW.</li>
             <li>Send a 1kHz, +4dBu test signal.</li>
@@ -1149,6 +1162,7 @@ Template: manual
             <li>Send a 1kHz, -10dBFS test signal.</li>
             <li>Open the Levels window and turn THRESH until "In" is 8dB lower than "Out."</li>
             <li>Trim VR3 until the meter shows 8dB gain reduction.</li>
+            <li>Unplug the power cable before proceeding with the assembly.</li>
         </ol>
 </div>
 </div>
@@ -1185,8 +1199,6 @@ Template: manual
 
 <h2>Modding the G Bus</h2>
 <p>There are a lot more mays to mod the G Bus than we could fit on the front panel. So if you want to customize your G Bus, head over to the <a href="https://support.diy.re/category/45-g-bus">G Bus Mods page</a>. Please keep in mind that we cannot offer support for the mods. There are simply too many variables that change once you start modding, especially after several mods. You're the man now, dog!</p> 
-
-
 
 <div class="manual-step">
 <h2>Help Us Improve</h2>
