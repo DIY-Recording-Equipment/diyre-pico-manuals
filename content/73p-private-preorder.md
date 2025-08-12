@@ -12,7 +12,7 @@ Template: page
 <li>Your card will be charged the full balance for the preorder at checkout.</li>
 <li>You can cancel your preorder at any time for a full refund. <a href="https://support.diy.re/">Contact us</a> to cancel.</li>
 <li>Preorders will ship in two groups. Group 1 will ship in August 2025, Group 2 will ship in September 2025. When the preorder closes you will be notified which group you are in.</li>
-<li>You will receive the new, slightly revised, version 1.1. See the&nbsp;<a href="https://www.diyrecordingequipment.com/products/73p-class-a-mic-preamp">product page</a> for a full description of the v1.1 changes.</li>
+<li>You will receive the new, slightly revised, version 1.1. See the bottom of the &nbsp;<a href="https://www.diyrecordingequipment.com/products/73p-class-a-mic-preamp#tabs-3">"Design Notes" tab on the product page</a> for a full description of the v1.1 changes.</li>
 </ul>
 
 <div id='product-component-1752762760711'></div>
