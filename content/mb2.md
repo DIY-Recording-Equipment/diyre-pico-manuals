@@ -139,9 +139,10 @@ Template: manual
     </div>
     @[/mods/caps-small.html]
     <div class="step-parts">
+	<p><strong>Note:</strong> C1 and C2 have been changed to the same type as C3 and C4, not the yellow type shown in the photos.</p>  
     <div class="part">    
         <p>C1, C2<br>1n cap (x4)</p>
-        <img src="%base_url%/assets/parts/com-c025.png">
+        <img src="%base_url%/assets/parts/com-c019.png">
     </div>
     <div class="part">    
         <p>C3, C4<br>0.22u cap (x4)</p>
