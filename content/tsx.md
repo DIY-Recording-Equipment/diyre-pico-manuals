@@ -32,12 +32,12 @@ Template: manual
 <h2>Component Sorting Sheet</h2>
 <div class="manual-step">
     <div class="step-image">
-    <a href="%base_url%/assets/[sorting sheet url]" target="_blank">
+    <a href="%base_url%/assets/tsx/tsx-sorting-sheet.pdf" target="_blank">
     <img src="%base_url%/assets/pdf-download.png" />
     </a>
     </div>
     <div class="step-description">
-        <p>To identify and keep track of every part in the kit, download and print the <a href="%base_url%/assets/[sorting sheet url]" target="_blank">Component Sorting Sheet (PDF)</a>.</p>
+        <p>To identify and keep track of every part in the kit, download and print the <a href="%base_url%/assets/tsx/tsx-sorting-sheet.pdf" target="_blank">Component Sorting Sheet (PDF)</a>.</p>
     </div>
 </div>
 
@@ -167,11 +167,6 @@ Template: manual
 </div>
 
 <div class="manual-step">
-    <div class="step-image">
-        <a href="%base_url%/assets/tsx/finished.jpg" target="_blank">
-        <img src="%base_url%/assets/tsx/finished-600.jpg" />
-        </a>
-    </div>
     @[/mods/finished.html]
 </div>
 
