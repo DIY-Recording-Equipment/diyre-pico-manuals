@@ -114,7 +114,7 @@ Template: manual
     </a>
     </div>
     @[/mods/diodes.html]
-    <p>Note that there are two kinds of diodes. The 1N914 are black and red, while the BAT42 are black and blue..</p>
+    <p>Note that there are two kinds of diodes. The 1N914 are black and red. The BAT42 may be blue/black or red/black. If they are red/black check the body for the marking "42.".</p>
 </div>
 
 <div class="manual-step">

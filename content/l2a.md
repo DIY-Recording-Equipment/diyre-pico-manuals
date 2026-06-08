@@ -83,7 +83,12 @@ Template: manual
         <img src="%base_url%/assets/l2a/caps-small-600.jpg" />
         </a>
     </div>
-    @[/mods/caps-small.html]
+    <h3 class="step-header">Populate Small Capacitors</h3>
+    
+<div class="step-description">
+        <p>Place the smaller capacitors in their respective places. These capacitors are not polarized and therefore can be placed in either direction. Solder then trim the leads.</p>
+        <p>Note that the color of the capacitors may be change. Identify the capacitors based on their markings, not their colors.</p>
+</div>
 </div>
 
 <h2>Transformer</h2>
@@ -110,6 +115,7 @@ Template: manual
         </a>
     </div>
     @[/mods/potentiometer.html]
+
 </div>
 
 <div class="manual-step">
@@ -119,6 +125,7 @@ Template: manual
         </a>
     </div>
     @[/mods/trs-jack.html]
+
 </div>
 
 <div class="manual-step">
@@ -128,6 +135,7 @@ Template: manual
         </a>
     </div>
     @[/mods/xlr-combo.html]
+
 </div>
 
 <div class="manual-step">
@@ -186,6 +194,8 @@ Template: manual
         <p>Screw in the eight mounting screws. It's a good idea to install all four screws on one panel loosely before tightening each one.</p>
 </div>
 </div>
+
+<h2>Final Assembly</h2>
 
 <div class="manual-step">
     <div class="step-image">

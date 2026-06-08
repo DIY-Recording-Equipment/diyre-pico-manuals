@@ -189,7 +189,7 @@ Template: manual
             <img src="%base_url%/assets/parts/com-d005.png">
         </div>
         <div class="part">
-            <p>D2<br>5.6v zener diode</p>
+            <p>D2<br>Zener diode</p>
             <img src="%base_url%/assets/parts/com-d010.png">
         </div>
     </div>
