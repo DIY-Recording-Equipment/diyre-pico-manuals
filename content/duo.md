@@ -437,8 +437,8 @@ Template: manual
 
 <div class="manual-step">
     <div class="step-image">
-    <a href="%base_url%/assets/duo/10.2.cap-fix.jpg" target="_blank">
-    <img src="%base_url%/assets/duo/10.2-cap-fix-600.jpg" />
+    <a href="%base_url%/assets/duo/6.6-power-caps.jpg" target="_blank">
+    <img src="%base_url%/assets/duo/6.6-power-caps-600.jpg" />
     </a>    
     </div>
     <h3 class="step-header">Populate Power Capacitors</h3>

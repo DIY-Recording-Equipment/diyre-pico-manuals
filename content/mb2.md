@@ -6,13 +6,13 @@ Template: manual
 
 <div>
   <div class="step-image">
-    <a href="[kit url in store]">
+    <a href="https://www.diyrecordingequipment.com/products/mb2">
              <img src="%base_url%/assets/mb2/finished-600.jpg">    	
     </a>
   </div>
   <div class="step-header">Welcome to the MB2 assembly guide.</div>
   <div class="step-description">
-      <p>Thank you for purchasing a <a href="[kit url in store]">MB2</a></p>
+      <p>Thank you for purchasing a <a href="https://www.diyrecordingequipment.com/products/mb2">MB2</a></p>
       <p>If this is your first DIY project ever, we recommend reading our <a href="http://www.diyrecordingequipment.com/pages/getting-started">Getting Started Guide</a>.</p>
   </div>
 </div>
@@ -141,9 +141,8 @@ Template: manual
     <div class="step-parts">
 	<p><strong>Note:</strong> C1 and C2 have been changed to the same type as C3 and C4, not the yellow type shown in the photos.</p>  
     <div class="part">    
-        <p>{RefDes}<br>{Item Name} (x{Qty})</p>
-        <img src="{Image}">
-        <p>{Markings}</p>
+        <p>C1, C2<br>1n cap (x4)</p>
+        <img src="%base_url%/assets/parts/com-c019.png">
     </div>
     <div class="part">    
         <p>C3, C4<br>0.22u cap (x4)</p>
