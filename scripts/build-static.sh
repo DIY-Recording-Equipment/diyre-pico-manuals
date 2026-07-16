@@ -32,9 +32,8 @@ FAILED=""
 COUNT=0
 while IFS= read -r slug; do
   [ -z "$slug" ] && continue
-  mkdir -p "_static_new/$slug"
-  http_code=$(curl -s -o "_static_new/$slug/index.html" -w "%{http_code}" "http://localhost:$PORT/$slug")
-  fatal=$(grep -c "Fatal error" "_static_new/$slug/index.html" 2>/dev/null || true)
+  http_code=$(curl -s -o "_static_new/$slug.html" -w "%{http_code}" "http://localhost:$PORT/$slug")
+  fatal=$(grep -c "Fatal error" "_static_new/$slug.html" 2>/dev/null || true)
   COUNT=$((COUNT + 1))
   if [ "$http_code" != "200" ] || [ "$fatal" != "0" ]; then
     echo "  FAIL: $slug -> HTTP $http_code, fatal_errors=$fatal"
@@ -54,7 +53,7 @@ if [ -n "$FAILED" ]; then
 fi
 echo "all pages crawled successfully"
 
-find _static_new -maxdepth 3 \( -name "index.html" -o -name "404.html" \) \
+find _static_new -maxdepth 1 -name "*.html" \
   | xargs sed -i '' "s|$BASE_URL||g"
 
 cp -R themes _static_new/themes
@@ -65,4 +64,4 @@ rm -rf _static
 mv _static_new _static
 
 echo
-echo "build complete: _static/ ($(find _static -name index.html | wc -l | tr -d ' ') pages)"
+echo "build complete: _static/ ($(find _static -maxdepth 1 -name '*.html' | wc -l | tr -d ' ') pages)"

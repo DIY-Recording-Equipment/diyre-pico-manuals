@@ -123,6 +123,13 @@ actually hosted), copies in `themes/` and `assets/`, and drops in
 `scripts/static.htaccess` as `_static/.htaccess`. Output lands in `_static/`,
 completely replacing whatever was there before.
 
+Every guide comes out as a **flat file** directly in `_static/` — e.g.
+`content/73p.md` becomes `_static/73p.html`, not `_static/73p/index.html`.
+Clean URLs (`manuals.diy.re/73p`) still work: `.htaccess` rewrites
+`/73p` or `/73p/` to `73p.html` internally via `mod_rewrite`, without
+redirecting the browser or changing the address bar. `index.html` and
+`404.html` are the two exceptions and stay exactly as named.
+
 The script exits non-zero and tells you which page(s) failed if any page
 comes back with a non-200 status or a PHP fatal error — don't upload if it
 does; fix the guide first and re-run.
@@ -142,10 +149,10 @@ must already exist (run the full build at least once first), then:
 
 e.g. `./scripts/build-one.sh ssdiy` for `content/ssdiy.md`, or
 `./scripts/build-one.sh index` for the homepage (`content/index.md`). This
-re-renders just that one page into `_static/<slug>/index.html`, refreshes
-that guide's `assets/<slug>/` images if any changed, and leaves every other
-page untouched. It does *not* refresh `themes/` — if you changed something
-in `themes/diyre/`, run the full `build-static.sh` instead.
+re-renders just that one page into `_static/<slug>.html`, refreshes that
+guide's `assets/<slug>/` images if any changed, and leaves every other page
+untouched. It does *not* refresh `themes/` — if you changed something in
+`themes/diyre/`, run the full `build-static.sh` instead.
 
 ## Uploading to manuals.diy.re
 
@@ -153,13 +160,17 @@ The live server is plain Apache serving static files — no PHP, no database.
 
 1. Run `./scripts/build-static.sh` and eyeball a couple of pages locally
    (`python3 -m http.server 8080` from inside `_static/` and click around) —
-   especially any guide you just edited.
+   especially any guide you just edited. Note: this only checks the HTML
+   itself, not the clean-URL rewrite — Python's static server doesn't read
+   `.htaccess`/`mod_rewrite`, so `/73p` (no `.html`) will 404 locally even
+   though it'll work fine once it's actually on Apache.
 2. Upload the **contents** of `_static/` (not the folder itself) to the
    server's document root via your usual FTP/SFTP/SSH client, overwriting
    what's there. Make sure `.htaccess` (a dotfile — some FTP clients hide
    these by default) actually goes up too.
-3. Spot-check the live URL for the guide(s) you changed, plus the homepage
-   and a deliberately wrong URL (to confirm the 404 page fires).
+3. Spot-check the live URL for the guide(s) you changed (both with and
+   without a trailing slash), the homepage, and a deliberately wrong URL
+   (to confirm the 404 page fires).
 
 There's no build automation (no CI, no deploy hook) — this is a manual,
 occasional process, which is fine for a site that changes a few times a

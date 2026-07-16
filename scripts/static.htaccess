@@ -1,7 +1,13 @@
-# Serve clean URLs (e.g. /ssdiy/ -> /ssdiy/index.html) via normal directory indexes
 DirectoryIndex index.html
-
 ErrorDocument 404 /404.html
 
 # Prevent file browsing
 Options -Indexes -MultiViews
+
+# Serve clean URLs (e.g. /ssdiy or /ssdiy/) from a flat file (ssdiy.html)
+# sitting in the document root, without redirecting the browser.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^([^/]+)/?$ $1.html [L]
+</IfModule>

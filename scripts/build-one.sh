@@ -44,8 +44,7 @@ sleep 1
 if [ "$SLUG" = "index" ]; then
   OUT="_static/index.html"
 else
-  mkdir -p "_static/$SLUG"
-  OUT="_static/$SLUG/index.html"
+  OUT="_static/$SLUG.html"
 fi
 
 URL="http://localhost:$PORT/"

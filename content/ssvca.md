@@ -119,7 +119,7 @@ Template: manual
 
 <div class="manual-step">
     <div class="step-image">
-        <a href="%base_url%/assets/ssvca/vert-res-pace.jpg" target="_blank">
+        <a href="%base_url%/assets/ssvca/vert-res-place.jpg" target="_blank">
         <img src="%base_url%/assets/ssvca/vert-res-place-600.jpg" />
         </a>
     </div>
