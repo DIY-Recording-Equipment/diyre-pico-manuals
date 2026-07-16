@@ -681,7 +681,7 @@ Template: manual
             <img src="%base_url%/assets/parts/pcb-082.png">
         </div>
         <div class="part">
-            <p>VCA1A<br>12-pin header (x2)</p>
+            <p>VCA1A<br>7-pin header (x2)</p>
             <img src="%base_url%/assets/parts/com-h017.png">
         </div>
 </div>
@@ -808,7 +808,7 @@ Template: manual
             <img src="%base_url%/assets/parts/pcb-082.png">
         </div>
         <div class="part">
-            <p>VCA2<br>12-pin header (x2)</p>
+            <p>VCA2<br>7-pin header (x2)</p>
             <img src="%base_url%/assets/parts/com-h017.png">
         </div>
         <div class="part">
