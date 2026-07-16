@@ -115,13 +115,23 @@ wrong.)
 ./scripts/build-static.sh
 ```
 
-This starts a temporary local PHP server, crawls every real page in
-`content/*.md` (skipping `test.md` and the include-fragment directories),
-strips the `base_url` origin from every link so they come out root-relative
-(`/themes/...`, `/assets/...` — portable, and matches how the site is
-actually hosted), copies in `themes/` and `assets/`, and drops in
-`scripts/static.htaccess` as `_static/.htaccess`. Output lands in `_static/`,
-completely replacing whatever was there before.
+Run this after editing one or more guides. It compares each
+`content/<slug>.md`'s modification time against its built
+`_static/<slug>.html` and rebuilds only the guides that are newer than
+their last build, leaving everything else untouched, and prints which
+guides it found changed. If `_static/` doesn't exist yet, or nothing has
+changed since the last build, it automatically does a full rebuild of
+every page instead — so it's always safe to just run this one command,
+whether it's your first build or your fiftieth.
+
+A full rebuild is also required (not just a safe fallback) after changing
+`themes/diyre/` or a shared `content/tools|checks|mods/` fragment — the
+per-file timestamp check has no way to know a shared template or fragment
+affects other guides. Force one with:
+
+```bash
+rm -rf _static && ./scripts/build-static.sh
+```
 
 Every guide comes out as a **flat file** directly in `_static/` — e.g.
 `content/73p.md` becomes `_static/73p.html`, not `_static/73p/index.html`.
@@ -137,22 +147,6 @@ does; fix the guide first and re-run.
 `_static/` is gitignored on purpose — it's regenerated from source, not
 maintained by hand. Never edit anything inside it directly; edit the
 `content/`/`themes/`/`assets/` source and rebuild.
-
-### Rebuilding just one guide
-
-Editing a single guide doesn't require rebuilding all 28 pages. `_static/`
-must already exist (run the full build at least once first), then:
-
-```bash
-./scripts/build-one.sh <slug>
-```
-
-e.g. `./scripts/build-one.sh ssdiy` for `content/ssdiy.md`, or
-`./scripts/build-one.sh index` for the homepage (`content/index.md`). This
-re-renders just that one page into `_static/<slug>.html`, refreshes that
-guide's `assets/<slug>/` images if any changed, and leaves every other page
-untouched. It does *not* refresh `themes/` — if you changed something in
-`themes/diyre/`, run the full `build-static.sh` instead.
 
 ## Uploading to manuals.diy.re
 
