@@ -14,3 +14,6 @@ desktop.ini
 # Composer
 /composer.phar
 /vendor
+
+# Generated static-HTML output
+/_static
