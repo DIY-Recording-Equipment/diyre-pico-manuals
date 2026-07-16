@@ -1,0 +1,7 @@
+# Serve clean URLs (e.g. /ssdiy/ -> /ssdiy/index.html) via normal directory indexes
+DirectoryIndex index.html
+
+ErrorDocument 404 /404.html
+
+# Prevent file browsing
+Options -Indexes -MultiViews
