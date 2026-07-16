@@ -133,12 +133,13 @@ affects other guides. Force one with:
 rm -rf _static && ./scripts/build-static.sh
 ```
 
-Every guide comes out as a **flat file** directly in `_static/` — e.g.
-`content/73p.md` becomes `_static/73p.html`, not `_static/73p/index.html`.
-Clean URLs (`manuals.diy.re/73p`) still work: `.htaccess` rewrites
-`/73p` or `/73p/` to `73p.html` internally via `mod_rewrite`, without
-redirecting the browser or changing the address bar. `index.html` and
-`404.html` are the two exceptions and stay exactly as named.
+Every guide comes out as its own **folder** — e.g. `content/73p.md`
+becomes `_static/73p/index.html`, giving a clean URL
+(`manuals.diy.re/73p`) via Apache's ordinary `DirectoryIndex` handling, no
+rewrite needed. This matches the output convention of the Eleventy
+(`diyre-libdoc`) site living alongside it, so guides from either system
+resolve the same way once uploaded to the same document root. `404.html`
+sits flat at the root, since it isn't tied to a guide slug.
 
 The script exits non-zero and tells you which page(s) failed if any page
 comes back with a non-200 status or a PHP fatal error — don't upload if it
@@ -154,10 +155,12 @@ The live server is plain Apache serving static files — no PHP, no database.
 
 1. Run `./scripts/build-static.sh` and eyeball a couple of pages locally
    (`python3 -m http.server 8080` from inside `_static/` and click around) —
-   especially any guide you just edited. Note: this only checks the HTML
-   itself, not the clean-URL rewrite — Python's static server doesn't read
-   `.htaccess`/`mod_rewrite`, so `/73p` (no `.html`) will 404 locally even
-   though it'll work fine once it's actually on Apache.
+   especially any guide you just edited. This now works correctly for
+   guide URLs, since Python's static server handles a real `<slug>/`
+   directory with an `index.html` in it the same way Apache does. It
+   won't replicate the root (`/`) redirect though, since that still needs
+   `.htaccess`/`mod_rewrite` — expect `/` to just serve the (unreachable
+   in production) homepage locally instead of redirecting.
 2. Upload the **contents** of `_static/` (not the folder itself) to the
    server's document root via your usual FTP/SFTP/SSH client, overwriting
    what's there. Make sure `.htaccess` (a dotfile — some FTP clients hide

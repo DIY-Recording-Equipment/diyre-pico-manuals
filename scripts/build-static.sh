@@ -21,7 +21,7 @@ else
   while IFS= read -r slug; do
     [ -z "$slug" ] && continue
     md="content/$slug.md"
-    out="_static/$slug.html"
+    out="_static/$slug/index.html"
     if [ ! -f "$out" ] || [ "$md" -nt "$out" ]; then
       CHANGED="$CHANGED$slug"$'\n'
     fi
@@ -55,8 +55,9 @@ if [ "$FULL_REBUILD" = true ]; then
   COUNT=0
   while IFS= read -r slug; do
     [ -z "$slug" ] && continue
-    http_code=$(curl -s -o "_static_new/$slug.html" -w "%{http_code}" "http://localhost:$PORT/$slug")
-    fatal=$(grep -c "Fatal error" "_static_new/$slug.html" 2>/dev/null || true)
+    mkdir -p "_static_new/$slug"
+    http_code=$(curl -s -o "_static_new/$slug/index.html" -w "%{http_code}" "http://localhost:$PORT/$slug")
+    fatal=$(grep -c "Fatal error" "_static_new/$slug/index.html" 2>/dev/null || true)
     COUNT=$((COUNT + 1))
     if [ "$http_code" != "200" ] || [ "$fatal" != "0" ]; then
       echo "  FAIL: $slug -> HTTP $http_code, fatal_errors=$fatal"
@@ -76,7 +77,7 @@ if [ "$FULL_REBUILD" = true ]; then
   fi
   echo "all pages crawled successfully"
 
-  find _static_new -maxdepth 1 -name "*.html" \
+  find _static_new -maxdepth 3 \( -name "index.html" -o -name "404.html" \) \
     | xargs sed -i '' "s|$BASE_URL||g"
 
   mkdir -p "_static_new/themes/$THEME"
@@ -89,7 +90,7 @@ if [ "$FULL_REBUILD" = true ]; then
   mv _static_new _static
 
   echo
-  echo "build complete: _static/ ($(find _static -maxdepth 1 -name '*.html' | wc -l | tr -d ' ') pages)"
+  echo "build complete: _static/ ($(find _static -name index.html | wc -l | tr -d ' ') pages)"
 else
   echo "changed since last build:"
   printf '%s' "$CHANGED" | sed 's/^/  /'
@@ -98,8 +99,9 @@ else
   FAILED=""
   while IFS= read -r slug; do
     [ -z "$slug" ] && continue
-    out="_static/$slug.html"
-    tmp="_static/$slug.html.new"
+    mkdir -p "_static/$slug"
+    out="_static/$slug/index.html"
+    tmp="_static/$slug/index.html.new"
 
     http_code=$(curl -s -o "$tmp" -w "%{http_code}" "http://localhost:$PORT/$slug")
     fatal=$(grep -c "Fatal error" "$tmp" 2>/dev/null || true)

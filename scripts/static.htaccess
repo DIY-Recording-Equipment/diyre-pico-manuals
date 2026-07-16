@@ -4,14 +4,9 @@ ErrorDocument 404 /404.html
 # Prevent file browsing
 Options -Indexes -MultiViews
 
-# Serve clean URLs (e.g. /ssdiy or /ssdiy/) from a flat file (ssdiy.html)
-# sitting in the document root, without redirecting the browser.
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
     # Root visits go to the main store's manuals landing page, not our own homepage
     RewriteRule ^(index\.html)?$ https://www.diyrecordingequipment.com/pages/manuals [R=301,L]
-
-    RewriteCond %{REQUEST_FILENAME}.html -f
-    RewriteRule ^([^/]+)/?$ $1.html [L]
 </IfModule>
