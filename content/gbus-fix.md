@@ -1,6 +1,6 @@
 ---
 Title: G Bus Bug Fix
-Date: [date]
+Date: 2024-06-19
 Template: manual
 ---
 

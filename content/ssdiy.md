@@ -27,7 +27,6 @@ Template: manual
 
 <div id="assembly-guide-content">
 
-
 <div class="manual-step">
     <div class="step-image">
         <a href="%base_url%/assets/ssdiy/01-headers.jpg" target="_blank">

@@ -1,6 +1,6 @@
 ---
 Title: Toneloc Assembly Guide
-Date: [date]
+Date: 2024-06-19
 Template: manual
 ---
 

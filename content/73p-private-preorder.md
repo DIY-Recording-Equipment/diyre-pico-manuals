@@ -1,6 +1,6 @@
 ---
 Title: 73P Private Preorder
-Date: [date]
+Date: 2025-07-17
 Template: page
 ---
 
