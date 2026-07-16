@@ -5,6 +5,7 @@ cd "$(dirname "$0")/.."
 PORT=8000
 BASE_URL=$(grep '^base_url:' config/config.yml | awk '{print $2}')
 BASE_URL=${BASE_URL%/}
+THEME=$(grep '^theme:' config/config.yml | awk '{print $2}')
 
 if [ -z "$BASE_URL" ] || [ "$BASE_URL" = "~" ]; then
   echo "config/config.yml base_url is unset — set it to your production URL before building." >&2
@@ -56,7 +57,9 @@ echo "all pages crawled successfully"
 find _static_new -maxdepth 1 -name "*.html" \
   | xargs sed -i '' "s|$BASE_URL||g"
 
-cp -R themes _static_new/themes
+mkdir -p "_static_new/themes/$THEME"
+cp -R "themes/$THEME"/* "_static_new/themes/$THEME"/
+find "_static_new/themes/$THEME" -name "*.twig" -delete
 cp -R assets _static_new/assets
 cp scripts/static.htaccess _static_new/.htaccess
 
