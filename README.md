@@ -111,8 +111,7 @@ wrong.)
 
 ## Building the static site
 
-```bash
-./scripts/build-static.sh
+```bash ./scripts/build-static.sh
 ```
 
 Run this after editing one or more guides. It compares each
