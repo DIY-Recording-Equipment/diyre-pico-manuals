@@ -44,6 +44,21 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -p "${{ secrets.SITEGROUND_SSH_PORT }}" "${{ secrets.SITEGROUND_SSH_HOST }}" >> ~/.ssh/known_hosts
 
+      # TEMPORARY DEBUG STEP -- remove once the empty-destination issue is
+      # diagnosed. Writes the resolved (unmasked) destination string to a
+      # local file on the runner machine only, for direct inspection --
+      # never printed to the GitHub-hosted log.
+      - name: DEBUG - dump resolved rsync destination
+        run: |
+          {
+            echo "raw destination string:"
+            printf '%s' "${{ secrets.SITEGROUND_SSH_USER }}@${{ secrets.SITEGROUND_SSH_HOST }}:${{ secrets.SITEGROUND_REMOTE_PATH }}"
+            echo ""
+            echo ""
+            echo "hexdump of SITEGROUND_REMOTE_PATH alone:"
+            printf '%s' "${{ secrets.SITEGROUND_REMOTE_PATH }}" | od -c
+          } > /tmp/pico-manuals-deploy-debug.txt
+
       # No --delete: this shares a document root with diyre-libdoc's own
       # deploy, so removing files not present in this repo's own output
       # would destroy the other site's files. --exclude=.htaccess is a
