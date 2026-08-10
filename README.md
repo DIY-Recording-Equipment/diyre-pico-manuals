@@ -15,7 +15,7 @@ HTML/CSS/JS/images — no PHP.
   These are not standalone pages and never get crawled/deployed on their own.
 - **`themes/diyre/`** — the site's Twig templates (`manual.twig` for guides,
   `page.twig` for plain pages, `index.twig` for the homepage) and its CSS/JS.
-- **`assets/`** — images, one subfolder per guide (`assets/ssdiy/`,
+- **`assets/`** — images, one subfolder per guide (`assets/73p/`,
   `assets/doa/`, etc.), plus shared images like tool icons
   (`assets/tools/`) and the logo.
 - **`config/config.yml`** — site config. `base_url` must be set to
@@ -25,8 +25,9 @@ HTML/CSS/JS/images — no PHP.
   (`composer install` regenerates it). Only needed for local editing/preview;
   never uploaded to the server.
 - **`_static/`** — the generated static site. Not committed (gitignored) —
-  it's a build artifact, produced by `scripts/build-static.sh`. This is the
-  folder you upload.
+  it's a build artifact, produced by `scripts/build-static.sh`. Pushing to
+  `master` auto-deploys this folder's contents (see "Deploying to
+  manuals.diy.re" below).
 
 ## Prerequisites (one-time machine setup)
 
@@ -148,29 +149,35 @@ does; fix the guide first and re-run.
 maintained by hand. Never edit anything inside it directly; edit the
 `content/`/`themes/`/`assets/` source and rebuild.
 
-## Uploading to manuals.diy.re
+## Deploying to manuals.diy.re
 
 The live server is plain Apache serving static files — no PHP, no database.
 
-1. Run `./scripts/build-static.sh` and eyeball a couple of pages locally
-   (`python3 -m http.server 8080` from inside `_static/` and click around) —
-   especially any guide you just edited. This now works correctly for
-   guide URLs, since Python's static server handles a real `<slug>/`
-   directory with an `index.html` in it the same way Apache does. It
-   won't replicate the root (`/`) redirect though, since that still needs
-   `.htaccess`/`mod_rewrite` — expect `/` to just serve the (unreachable
-   in production) homepage locally instead of redirecting.
-2. Upload the **contents** of `_static/` (not the folder itself) to the
-   server's document root via your usual FTP/SFTP/SSH client, overwriting
-   what's there. Make sure `.htaccess` (a dotfile — some FTP clients hide
-   these by default) actually goes up too.
-3. Spot-check the live URL for the guide(s) you changed (both with and
-   without a trailing slash), the homepage, and a deliberately wrong URL
-   (to confirm the 404 page fires).
+Deploys are automated: pushing to `master` triggers
+`.github/workflows/deploy.yml`, which runs `composer install`, does a clean
+`./scripts/build-static.sh` rebuild, and rsyncs the contents of `_static/`
+to the server over SSH. It runs on a self-hosted GitHub Actions runner (the
+same one used by the `diyre-libdoc` repo) rather than a GitHub-hosted one,
+because SiteGround appears to block SSH connections from GitHub-hosted
+runners' IP ranges.
 
-There's no build automation (no CI, no deploy hook) — this is a manual,
-occasional process, which is fine for a site that changes a few times a
-month.
+Before pushing, it's still worth eyeballing your changes locally:
+`./scripts/build-static.sh` then `python3 -m http.server 8080` from inside
+`_static/` and click around, especially any guide you just edited. This
+works correctly for guide URLs, since Python's static server handles a real
+`<slug>/` directory with an `index.html` in it the same way Apache does. It
+won't replicate the root (`/`) redirect though, since that needs
+`.htaccess`/`mod_rewrite` — expect `/` to just serve the (unreachable in
+production) homepage locally instead of redirecting.
+
+`_static/` intentionally does **not** include a `.htaccess` (see
+`scripts/build-static.sh`) — the server's document root is shared with the
+`diyre-libdoc` site, and that repo's `.htaccess` is the sole source of
+truth for it. Don't add one back here without updating that arrangement.
+
+After a deploy lands (check the Actions tab), spot-check the live URL for
+the guide(s) you changed (both with and without a trailing slash), the
+homepage, and a deliberately wrong URL (to confirm the 404 page fires).
 
 ## Known gaps (not blockers, just things to know about)
 

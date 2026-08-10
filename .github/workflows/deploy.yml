@@ -1,0 +1,59 @@
+name: Build and deploy to SiteGround
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    # Runs on the same self-hosted runner used by diyre-libdoc (registered at
+    # the DIY-Recording-Equipment org level, so it's already available here
+    # too). SiteGround appears to block/drop SSH connections from
+    # GitHub-hosted runners' datacenter IP ranges, hence self-hosted.
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install PHP dependencies
+        run: composer install
+
+      # A self-hosted runner's work directory persists between runs (unlike
+      # GitHub-hosted runners, which start fresh every time), so a stale
+      # _static/ from a previous run would still be sitting here. That
+      # matters because build-static.sh's incremental path only touches
+      # changed guide pages -- it skips regenerating the homepage, 404.html,
+      # and theme assets. actions/checkout also always resets content/*.md's
+      # mtimes to "now", which would make the script think every guide
+      # changed and take the incremental path on every single run, silently
+      # never refreshing the homepage/404/theme. Force a full rebuild every
+      # time instead, so CI is always deterministic and complete.
+      - name: Clean build
+        run: |
+          rm -rf _static
+          ./scripts/build-static.sh
+
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SITEGROUND_SSH_KEY }}
+
+      - name: Trust SiteGround host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "${{ secrets.SITEGROUND_SSH_PORT }}" "${{ secrets.SITEGROUND_SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      # No --delete: this shares a document root with diyre-libdoc's own
+      # deploy, so removing files not present in this repo's own output
+      # would destroy the other site's files. --exclude=.htaccess is a
+      # second safety net on top of build-static.sh no longer producing one
+      # at all -- diyre-libdoc's .htaccess is the sole source of truth for
+      # the shared docroot (see that repo's .htaccess and CLAUDE.md).
+      - name: Deploy over SSH (rsync)
+        run: |
+          rsync -avz \
+            --exclude=.htaccess \
+            -e "ssh -p ${{ secrets.SITEGROUND_SSH_PORT }}" \
+            _static/ \
+            "${{ secrets.SITEGROUND_SSH_USER }}@${{ secrets.SITEGROUND_SSH_HOST }}:${{ secrets.SITEGROUND_REMOTE_PATH }}"

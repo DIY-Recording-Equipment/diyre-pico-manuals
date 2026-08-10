@@ -84,7 +84,9 @@ if [ "$FULL_REBUILD" = true ]; then
   cp -R "themes/$THEME"/* "_static_new/themes/$THEME"/
   find "_static_new/themes/$THEME" -name "*.twig" -delete
   cp -R assets _static_new/assets
-  cp scripts/static.htaccess _static_new/.htaccess
+  # No .htaccess here on purpose: manuals.diy.re's document root is shared
+  # with the diyre-libdoc site, and diyre-libdoc's own .htaccess is now the
+  # sole source of truth for it (see that repo's .htaccess and CLAUDE.md).
 
   rm -rf _static
   mv _static_new _static
