@@ -172,10 +172,3 @@ Template: manual
 
 </div>
 
-<div class="manual-step">
-<h2>Help Us Improve</h2>
-    <form action="https://formsubmit.co/support@diyrecordingequipment.com" method="POST" id="form-contact">
-      <input type="hidden" name="_subject" value="%meta.title% Feedback">
-    @[mods/contact.html]   
-    </form>
-</div>

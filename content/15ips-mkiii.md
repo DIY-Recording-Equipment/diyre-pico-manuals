@@ -188,14 +188,11 @@ Template: manual
         <img src="%base_url%/assets/15ips3/finished-600.jpg" />
         </a>
     </div>
-    @[/mods/finished.html]
+    <h3 class="step-header">Finished!</h3>
+    <div class="step-description">
+        <p>Congratulations on finishing your build! If something isn't working right, start with our <a href="https://manuals.diy.re/docs/troubleshooting/general/general-troubleshooting-tips/">general troubleshooting tips</a>, or go straight to the <a href="https://manuals.diy.re/docs/troubleshooting/product/15ips-troubleshooting/">15IPS troubleshooting guide</a> for issues specific to this kit.</p>
+        <p>Have general feedback or a question? <a href="https://manuals.diy.re/docs/contact/">Get in touch</a>. Missing or need replacement parts? Submit a <a href="https://manuals.diy.re/docs/contact/parts/">Parts Request</a>. And if you've worked through the troubleshooting guides above and are still stuck, reach out through the <a href="https://manuals.diy.re/docs/contact/troubleshooting/">troubleshooting support form</a>.</p>
+    </div>
 </div>
 </div>
 
-<div class="manual-step">
-<h2>Help Us Improve</h2>
-    <form action="https://formsubmit.co/support@diyrecordingequipment.com" method="POST" id="form-contact">
-      <input type="hidden" name="_subject" value="%meta.title% Feedback">
-    @[mods/contact.html]   
-    </form>
-</div>

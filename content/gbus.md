@@ -1200,10 +1200,3 @@ Template: manual
 <h2>Modding the G Bus</h2>
 <p>There are a lot more mays to mod the G Bus than we could fit on the front panel. So if you want to customize your G Bus, head over to the <a href="https://support.diy.re/category/45-g-bus">G Bus Mods page</a>. Please keep in mind that we cannot offer support for the mods. There are simply too many variables that change once you start modding, especially after several mods. You're the man now, dog!</p> 
 
-<div class="manual-step">
-<h2>Help Us Improve</h2>
-    <form action="https://formsubmit.co/support@diyrecordingequipment.com" method="POST" id="form-contact">
-      <input type="hidden" name="_subject" value="%meta.title% Feedback">
-    @[mods/contact.html]   
-    </form>
-</div>
