@@ -279,6 +279,15 @@ Template: manual
         <p>Congrats on completing your SS VCA. To begin using it, simply plug it into a host such as the Colour Palette and turn the Colour knob to begin compressing.</p>
         <p>The SS VCA has a fixed threshold. Therefore, the Colour knob on the host controls the amount of compression by controlling the input level to the SS VCA.</p>
         <p>The ratio and attack/release time constants can be set via the switches SW1 and SW2. The ratios are 2:1 and 8:1. The attack/release times are 2ms/20ms for FAST and 20ms/200ms for SLOW.</p>
+        <p>Congratulations on finishing your build!</p>
+        <p>Have general feedback or a question? <a href="https://manuals.diy.re/docs/contact/">Get in touch</a>.</p>
+        <p>Missing a part or need replacements? Submit a <a href="https://manuals.diy.re/docs/contact/parts/">Parts Request</a>.</p>
+        <p>Something not working right? Don't worry, we have plenty of troubleshooting resources to help you figure it out.</p>
+        <ul>
+        <li><a href="https://manuals.diy.re/docs/troubleshooting/general/general-troubleshooting-tips/">General troubleshooting guide</a></li>
+        <li><a href="https://manuals.diy.re/docs/troubleshooting/product/ss-vca-troubleshooting/">SS VCA troubleshooting guide</a></li>
+        </ul>
+        <p>If you've worked through the troubleshooting guides above and are still stuck, reach out through the <a href="https://manuals.diy.re/docs/contact/troubleshooting/">troubleshooting support form</a>.</p>
         </div>
 </div>
 

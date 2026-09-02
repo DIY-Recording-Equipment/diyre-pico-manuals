@@ -154,6 +154,15 @@ Template: manual
         </p>
         <p><strong>Setting the Release Option:</strong> Place jumper you set aside in step 2.2 on the 3-pin header to set the release time. FST is the default option which matches the behavior of the original unit. SLO is slower than the original release time, and will make the compression smoother and less aggressive. Part of the character of the Toneloc is that the release time varies based on the input level, so there is no single time constant for either setting. To match your Toneloc 2.0 to a Toneloc 1.0, use the FST setting.
         </p>
+        <p>Congratulations on finishing your build!</p>
+        <p>Have general feedback or a question? <a href="https://manuals.diy.re/docs/contact/">Get in touch</a>.</p>
+        <p>Missing a part or need replacements? Submit a <a href="https://manuals.diy.re/docs/contact/parts/">Parts Request</a>.</p>
+        <p>Something not working right? Don't worry, we have plenty of troubleshooting resources to help you figure it out.</p>
+        <ul>
+        <li><a href="https://manuals.diy.re/docs/troubleshooting/general/general-troubleshooting-tips/">General troubleshooting guide</a></li>
+        <li><a href="https://manuals.diy.re/docs/troubleshooting/product/toneloc-troubleshooting/">Toneloc troubleshooting guide</a></li>
+        </ul>
+        <p>If you've worked through the troubleshooting guides above and are still stuck, reach out through the <a href="https://manuals.diy.re/docs/contact/troubleshooting/">troubleshooting support form</a>.</p>
 </div>
 </div>
 </div>

@@ -191,8 +191,8 @@ Template: manual
     <h3 class="step-header">Finished!</h3>
     <div class="step-description">
         <p>Congratulations on finishing your build!</p> 
-        <p>Have general feedback or a question? <a href="https://manuals.diy.re/docs/contact/">Get in touch</p>. 
-        <p>Missing a part or or need replacements? Submit a <a href="https://manuals.diy.re/docs/contact/parts/">Parts Request</a>.</p>
+        <p>Have general feedback or a question? <a href="https://manuals.diy.re/docs/contact/">Get in touch</a>.</p> 
+        <p>Missing a part or need replacements? Submit a <a href="https://manuals.diy.re/docs/contact/parts/">Parts Request</a>.</p>
         <p>Something not working right? Don't worry, we have plenty of troubleshooting resources to help you figure it out.</p>
         <ul>
         <li><a href="https://manuals.diy.re/docs/troubleshooting/general/general-troubleshooting-tips/">General troubleshooting guide</a></li>
