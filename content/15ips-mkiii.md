@@ -190,9 +190,15 @@ Template: manual
     </div>
     <h3 class="step-header">Finished!</h3>
     <div class="step-description">
-        <p>Congratulations on finishing your build! If something isn't working right, start with our <a href="https://manuals.diy.re/docs/troubleshooting/general/general-troubleshooting-tips/">general troubleshooting tips</a>, or go straight to the <a href="https://manuals.diy.re/docs/troubleshooting/product/15ips-troubleshooting/">15IPS troubleshooting guide</a> for issues specific to this kit.</p>
-        <p>Have general feedback or a question? <a href="https://manuals.diy.re/docs/contact/">Get in touch</a>. Missing or need replacement parts? Submit a <a href="https://manuals.diy.re/docs/contact/parts/">Parts Request</a>. And if you've worked through the troubleshooting guides above and are still stuck, reach out through the <a href="https://manuals.diy.re/docs/contact/troubleshooting/">troubleshooting support form</a>.</p>
+        <p>Congratulations on finishing your build!</p> 
+        <p>Have general feedback or a question? <a href="https://manuals.diy.re/docs/contact/">Get in touch</p>. 
+        <p>Missing a part or or need replacements? Submit a <a href="https://manuals.diy.re/docs/contact/parts/">Parts Request</a>.</p>
+        <p>Something not working right? Don't worry, we have plenty of troubleshooting resources to help you figure it out.</p>
+        <ul>
+        <li><a href="https://manuals.diy.re/docs/troubleshooting/general/general-troubleshooting-tips/">General troubleshooting guide</a></li>
+        <li><a href="https://manuals.diy.re/docs/troubleshooting/product/15ips-troubleshooting/">15IPS troubleshooting guide</a></li>
+        </ul>
+        <p>If you've worked through the troubleshooting guides above and are still stuck, reach out through the <a href="https://manuals.diy.re/docs/contact/troubleshooting/">troubleshooting support form</a>.</p>
     </div>
 </div>
 </div>
-
