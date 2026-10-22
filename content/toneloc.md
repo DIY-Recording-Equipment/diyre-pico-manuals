@@ -78,7 +78,27 @@ Template: manual
     <img src="%base_url%/assets/toneloc/transistors.jpg" />
     </a>
     </div>
-    @[/mods/transistors.html]
+      <h3 class="step-header">Populate Transistors</h3>
+
+<div class="step-description">
+    <p>There are two important things to note about transistors. First, the orientation: one side of the body is flat while the other is round. And second, the part number: carefully check the markings on the sorting sheet against those on the body before inserting them.</p>
+    <p>Identify the transistors, place them in the correct positions orientation, double check, and then solder and trim.</p>
+        <div class="part">
+            <p>Q1<br>2N5458 JFET</p>
+            <img src="%base_url%/assets/parts/com-t002.png">
+            <p>Markings: CEN 2N5458</p>
+        </div>
+        <div class="part">
+            <p>Q2-Q5<br>2N5088</p>
+            <img src="%base_url%/assets/parts/com-t002.png">
+            <p>Markings: CEN 2N5088</p>
+        </div>
+        <div class="part">
+            <p>Q6, Q7<br>PN2907A</p>
+            <img src="%base_url%/assets/parts/com-t002.png">
+            <p>Markings: JC2907A</p>
+        </div>
+</div>
 </div> 
 
 <div class="manual-step">
@@ -112,7 +132,27 @@ Template: manual
     <img src="%base_url%/assets/toneloc/caps-small-600.jpg" />
     </a>
     </div>
-    @[/mods/caps-small.html]
+    <h3 class="step-header">Populate Small Capacitors</h3>
+    
+<div class="step-description">
+        <p>Place the smaller capacitors in their respective places. These capacitors are not polarized and therefore can be placed in either direction. Solder then trim the leads.</p>
+        <p>Note that the capacitor colors have changed since these photos were first taken. Refer to the markings and colors below, not the photos.</p>
+        <div class="part">
+            <p>C1<br>.1uF film cap</p>
+            <img src="%base_url%/assets/parts/com-c005.png">
+            <p>Markings: 0,1/63-</p>
+        </div>
+        <div class="part">
+            <p>C2<br>10nF film cap</p>
+            <img src="%base_url%/assets/parts/com-c014.png">
+            <p>Markings: 10n 250V</p>
+        </div>
+        <div class="part">
+            <p>C2<br>1nF film cap</p>
+            <img src="%base_url%/assets/parts/com-c025.png">
+            <p>Markings: 1nJ63</p>
+        </div>
+</div>
 </div>
 
 <h2>Large Capacitors</h2>
@@ -127,6 +167,26 @@ Template: manual
     
 <div class="step-description">
         <p>Some of these capacitors are polarized, so they must be placed in a certain direction. The polarized capacitors are marked with a stripe on the body. On these the positive lead is slightly longer, while the negative lead is marked with a stripe on the body of the capacitor. Place the capacitors with the positive lead in the pad next to the "+" marking on the PCB. Double check their orientation, then solder and trim.</p>
+        <div class="part">
+            <p>C3, C6, C10-C12<br>4.7uF cap</p>
+            <img src="%base_url%/assets/parts/com-c021.png">
+        </div>
+        <div class="part">
+            <p>C4, C7, C22<br>10uF cap</p>
+            <img src="%base_url%/assets/parts/com-c001.png">
+        </div>
+        <div class="part">
+            <p>C8, C14, C20<br>47uF cap</p>
+            <img src="%base_url%/assets/parts/com-c034.png">
+        </div>
+        <div class="part">
+            <p>C13<br>2.2uF cap</p>
+            <img src="%base_url%/assets/parts/com-c036.png">
+        </div>
+        <div class="part">
+            <p>C18, C19, C21<br>100uF cap</p>
+            <img src="%base_url%/assets/parts/com-c022.png">
+        </div>
 </div>
 </div>
 
