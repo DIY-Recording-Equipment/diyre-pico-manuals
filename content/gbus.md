@@ -561,6 +561,7 @@ Template: manual
             <p>C14<br>22p cap (x2)</p>
             <img src="%base_url%/assets/parts/com-c003.png">
             <p>Markings: 22j</p>
+            <p>May be yellow or black.</p>
         </div>
         <div class="part">
             <p>C16<br>220u cap (x2)</p>
@@ -637,6 +638,7 @@ Template: manual
             <p>C21<br>22p cap (x2)</p>
             <img src="%base_url%/assets/parts/com-c003.png">
             <p>Markings: 22j</p>
+            <p>May be yellow or black.</p>
         </div>
         <div class="part">
             <p>C22, C24<br>22u cap (x4)</p>
@@ -721,6 +723,7 @@ Template: manual
             <p>C25, C28<br>22p cap (x4)</p>
             <img src="%base_url%/assets/parts/com-c003.png">
             <p>Markings: 22j</p>
+            <p>May be yellow or black.</p>
         </div>
         <div class="part">
             <p>C26<br>82n cap (x2)</p>
@@ -789,6 +792,7 @@ Template: manual
             <p>C31<br>22p cap (x2)</p>
             <img src="%base_url%/assets/parts/com-c003.png">
             <p>Markings: 22j</p>
+            <p>May be yellow or black.</p>
         </div>
         <div class="part">
             <p>C32<br>100p cap (x2)</p>

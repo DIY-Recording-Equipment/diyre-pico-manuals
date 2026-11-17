@@ -625,6 +625,8 @@ Template: manual
          <div class="part">
             <p>C6, C7, C8, C11<br>22p cap (x4)</p>
             <img src="%base_url%/assets/parts/com-c003.png">
+            <p>Markings: 22j</p>
+            <p>May be yellow or black.</p>
         </div>
 		<div class="part">
             <p>C10, C12<br>100p cap (x4)</p>
