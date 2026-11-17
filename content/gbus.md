@@ -84,7 +84,7 @@ Template: manual
 <h3 class="step-header">Populate Sockets and Bypass Capacitors</h3>
 
 <div class="step-description">
-        <p>Populate the yellow .1u capacitors in the positions marked CB etc. These capacitors give noise in the power rails a path to ground, "bypassing" the rest of the circuit. Hence the designator CB. Every CB part in the build is .1u, so the values are not marked on the PCB. These capacitors are not polarized.</p>
+        <p>Populate the .1u capacitors in the positions marked CB etc. The capacitors may be yellow or black. These capacitors give noise in the power rails a path to ground, "bypassing" the rest of the circuit. Hence the designator CB. Every CB part in the build is .1u, so the values are not marked on the PCB. These capacitors are not polarized.</p>
         <p>Insert the IC sockets so that the notches on the sockets align with the markings on the PCB. You may want to secure these with tape before soldering.</p>
 </div>
  <div class="step-parts">

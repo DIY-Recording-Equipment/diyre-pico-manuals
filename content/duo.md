@@ -167,7 +167,7 @@ Template: manual
     </a>    
     </div>
     <h3 class="step-header">Populate Bypass Capacitors</h3>
-    <div class="step-description"><p>Populate the yellow .1uF capacitors in the positions marked CB, as well as C10 and C11. These capacitors are not polarized and can therefore be installed in either direction. After soldering, trim the leads.</p></div>
+    <div class="step-description"><p>Populate the .1u capacitors in the positions marked CB, as well as C10 and C11. The capacitors may be yellow or black. These capacitors are not polarized and can therefore be installed in either direction. After soldering, trim the leads.</p></div>
         <div class="step-parts">
         <div class="part">
             <p>CB1-CB4, C10, C11<br>.1u ceramic cap (x6)</p>
@@ -583,6 +583,7 @@ Template: manual
         <div class="part">
             <p>CB1-CB10<br>.1u ceramic cap (x10)</p>
             <img src="%base_url%/assets/parts/com-c004.png">
+            <p>May be yellow or black.</p>
         </div>
     </div>
 </div>
